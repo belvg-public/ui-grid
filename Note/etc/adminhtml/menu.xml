@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<add id="Belvg::top_level" module="Belvg_Note" resource="Magento_Backend::content" sortOrder="9999" title="Belvg"/>
+		<add action="belvg_note/note/index" id="Belvg::belvg_note_note" module="Belvg_Note" parent="Belvg::top_level" resource="Magento_Backend::content" sortOrder="9999" title="Note"/>
+	</menu>
+</config>

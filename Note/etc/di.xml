@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<preference for="Belvg\Note\Api\NoteRepositoryInterface" type="Belvg\Note\Model\NoteRepository"/>
+	<preference for="Belvg\Note\Api\Data\NoteInterface" type="Belvg\Note\Model\Note"/>
+	<preference for="Belvg\Note\Api\Data\NoteSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+	<virtualType name="Belvg\Note\Model\ResourceModel\Note\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">belvg_note_note</argument>
+			<argument name="resourceModel" xsi:type="string">Belvg\Note\Model\ResourceModel\Note\Collection</argument>
+		</arguments>
+	</virtualType>
+	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+		<arguments>
+			<argument name="collections" xsi:type="array">
+				<item name="belvg_note_note_grid_data_source" xsi:type="string">Belvg\Note\Model\ResourceModel\Note\Grid\Collection</item>
+			</argument>
+		</arguments>
+	</type>
+</config>

@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+	<acl>
+		<resources>
+			<resource id="Magento_Backend::admin">
+				<resource id="Belvg_Note::Note" sortOrder="10" title="Note">
+					<resource id="Belvg_Note::Note_save" sortOrder="10" title="Save Note"/>
+					<resource id="Belvg_Note::Note_delete" sortOrder="20" title="Delete Note"/>
+					<resource id="Belvg_Note::Note_update" sortOrder="30" title="Update Note"/>
+					<resource id="Belvg_Note::Note_view" sortOrder="40" title="View Note"/>
+				</resource>
+			</resource>
+		</resources>
+	</acl>
+</config>
